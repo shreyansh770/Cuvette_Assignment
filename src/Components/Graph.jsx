@@ -79,7 +79,7 @@ let Graph = () => {
       </div>
       <div className="graph">
         <LineChart className="graph_" width={1200} height={300} data={linedata}>
-          <Line type="monotone" dataKey="uv" stroke="#C8D6E5" />
+          <Line type="monotone" dataKey="uv" stroke="#566474" />
           <XAxis type="number" dataKey="percentile" />
           <ReferenceLine
             x={res.resState.percentile}
