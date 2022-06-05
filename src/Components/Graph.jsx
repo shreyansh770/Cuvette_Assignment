@@ -29,9 +29,10 @@ let Graph = () => {
       percentile: 40,
       uv: 800,
     },
+
     {
       percentile: 60,
-      uv: 400,
+      uv: 300,
     },
     {
       percentile: 80,
@@ -56,13 +57,17 @@ let Graph = () => {
     return null;
   }
 
+  let x1_ = res.resState.percentile - 5;
+  let x2_ = x1_ + 10;
+
   return (
     <div className="graph-desp">
       <div className="graph-head">
         <div className="gh-text">
           <h3>Comparision Graph</h3>
           <p>
-            <b>You scored 37% percentile</b> which is lower than the
+            <b>You scored {res.resState.percentile}% percentile</b> which is
+            lower than the
           </p>
           <p style={{ marginTop: "0.3rem" }}>
             average percentile 72% of all the engineers who took this assessment
@@ -73,23 +78,19 @@ let Graph = () => {
         </div>
       </div>
       <div className="graph">
-      <LineChart className="graph_" width={1200} height={300} data={linedata}>
+        <LineChart className="graph_" width={1200} height={300} data={linedata}>
           <Line type="monotone" dataKey="uv" stroke="#C8D6E5" />
           <XAxis type="number" dataKey="percentile" />
           <ReferenceLine
             x={res.resState.percentile}
-            label={res.resState.percentile}
+            label="."
             strokeDasharray="5 5"
             stroke="#438AF6"
           />
-          <ReferenceArea
-            x1={res.resState.percentile-5}
-            x2={res.resState.percentile}
-            fill="#438AF6"
-          />
+          <ReferenceArea x1={x1_} x2={x2_} fill="#438AF6" fillOpacity={0.1} />
           <ReferenceLine
             x={72}
-            label="72"
+            label="."
             strokeDasharray="5 5"
             stroke="#FF9142"
             className="ref_avg"

@@ -3,7 +3,6 @@ import chtmlimg from "../Images/chtml-rbg.png";
 import cup from "../Images/cup.png";
 import tick from "../Images/correct.png";
 import board from "../Images/text.png";
-import { useEffect } from "react";
 import { AuthConext } from "../App";
 import { useContext } from "react";
 import Graph from "./Graph";
@@ -15,7 +14,9 @@ let Analytics = (props) => {
 
   return (
     <div className="analytics">
-      <div className="header"></div>
+      <div className="header">
+        <h4 >Skill Test</h4>
+      </div>
 
       <div className="analysis">
         <div className="left-part">

@@ -99,6 +99,15 @@
   color:#445ee2;
 }
 
+.avt{
+  background: #f7f8fa;
+  border-radius: 0 25px 25px 0;
+}
+
+.avt h2{
+  color:#445ee2;
+}
+
 @media (max-width: 1100px) {
   .side-bar {
     width: 17%;

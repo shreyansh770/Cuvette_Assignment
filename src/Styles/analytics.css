@@ -8,6 +8,14 @@
 .header {
   width: 100%;
   height: 10%;
+  display: flex;
+  align-items: center;
+}
+
+.header h4{
+  margin-left: 4.3rem;
+  font-size: 14px;
+  color: #566474;
 }
 
 .analysis {
